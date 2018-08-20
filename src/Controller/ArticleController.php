@@ -14,4 +14,13 @@ class ArticleController extends AbstractController{
 
         return $this->render('articles/index.html.twig');
     }
+
+    /** 
+     * @Route("/article/{slug}")
+    */
+    public function show($slug) {
+        return new Response ("<html><body>Hello $slug</body></html>");
+
+        //return $this->render('articles/index.html.twig');
+    }
 }
